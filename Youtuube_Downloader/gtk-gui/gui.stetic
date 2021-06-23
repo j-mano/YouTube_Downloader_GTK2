@@ -35,7 +35,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="YouTubbeLinkInput_Textbox">
                     <property name="MemberName" />
-                    <property name="WidthRequest">550</property>
+                    <property name="WidthRequest">580</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">•</property>
@@ -53,21 +53,6 @@
                   <packing>
                     <property name="X">14</property>
                     <property name="Y">6</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="Gtk.Button" id="Retrive_Vid_Info">
-                    <property name="MemberName" />
-                    <property name="WidthRequest">150</property>
-                    <property name="CanFocus">True</property>
-                    <property name="Type">TextOnly</property>
-                    <property name="Label" translatable="yes">Retrive VidInfo</property>
-                    <property name="UseUnderline">True</property>
-                    <signal name="Pressed" handler="OnRetriveVidInfoPressed" />
-                  </widget>
-                  <packing>
-                    <property name="X">577</property>
-                    <property name="Y">27</property>
                   </packing>
                 </child>
                 <child>
@@ -122,40 +107,11 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="Gtk.Button" id="Exit_BTN">
-                    <property name="MemberName" />
-                    <property name="WidthRequest">100</property>
-                    <property name="CanFocus">True</property>
-                    <property name="Type">TextOnly</property>
-                    <property name="Label" translatable="yes">Exit</property>
-                    <property name="UseUnderline">True</property>
-                    <signal name="Pressed" handler="OnButton1Pressed" />
-                  </widget>
-                  <packing>
-                    <property name="X">632</property>
-                    <property name="Y">540</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="Gtk.Button" id="Download_BTN">
-                    <property name="MemberName" />
-                    <property name="WidthRequest">100</property>
-                    <property name="CanFocus">True</property>
-                    <property name="Type">TextOnly</property>
-                    <property name="Label" translatable="yes">Download</property>
-                    <property name="UseUnderline">True</property>
-                    <signal name="Pressed" handler="OnDownloadBTNPressed" />
-                  </widget>
-                  <packing>
-                    <property name="X">635</property>
-                    <property name="Y">359</property>
-                  </packing>
-                </child>
-                <child>
                   <widget class="Gtk.Image" id="Video_Image">
                     <property name="MemberName" />
                     <property name="WidthRequest">700</property>
                     <property name="HeightRequest">250</property>
+                    <property name="Pixbuf">resource:Youtuube_Downloader.Screenshot from 2021-06-21 19-25-26.png</property>
                   </widget>
                   <packing>
                     <property name="X">16</property>
@@ -182,12 +138,71 @@
                     <property name="Y">577</property>
                   </packing>
                 </child>
+                <child>
+                  <widget class="Gtk.Button" id="Download_Audio_btn">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">150</property>
+                    <property name="CanFocus">True</property>
+                    <property name="Type">TextOnly</property>
+                    <property name="Label" translatable="yes">DownLoad Audio</property>
+                    <property name="UseUnderline">True</property>
+                  </widget>
+                  <packing>
+                    <property name="X">626</property>
+                    <property name="Y">397</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="Download_BTN">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">150</property>
+                    <property name="CanFocus">True</property>
+                    <property name="Type">TextOnly</property>
+                    <property name="Label" translatable="yes">Download Video</property>
+                    <property name="UseUnderline">True</property>
+                    <signal name="Pressed" handler="OnDownloadBTNPressed" />
+                  </widget>
+                  <packing>
+                    <property name="X">627</property>
+                    <property name="Y">356</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="Retrive_Vid_Info">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">150</property>
+                    <property name="CanFocus">True</property>
+                    <property name="Type">TextOnly</property>
+                    <property name="Label" translatable="yes">Retrive VidInfo</property>
+                    <property name="UseUnderline">True</property>
+                    <signal name="Pressed" handler="OnRetriveVidInfoPressed" />
+                  </widget>
+                  <packing>
+                    <property name="X">617</property>
+                    <property name="Y">25</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="Exit_BTN">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">100</property>
+                    <property name="CanFocus">True</property>
+                    <property name="Type">TextOnly</property>
+                    <property name="Label" translatable="yes">Exit</property>
+                    <property name="UseUnderline">True</property>
+                    <signal name="Pressed" handler="OnButton1Pressed" />
+                  </widget>
+                  <packing>
+                    <property name="X">669</property>
+                    <property name="Y">578</property>
+                  </packing>
+                </child>
               </widget>
             </child>
           </widget>
         </child>
         <child>
-          <widget class="Gtk.Label" id="GtkLabel3">
+          <widget class="Gtk.Label" id="GtkLabel4">
             <property name="MemberName" />
             <property name="LabelProp" translatable="yes">&lt;b&gt;Youtube Downloader&lt;/b&gt;</property>
             <property name="UseMarkup">True</property>

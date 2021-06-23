@@ -3,6 +3,11 @@ using System.Threading.Tasks;
 using Gtk;
 using YouTubeDownloadProject.Model;
 using YouTubeDownloadProject.Services;
+using Gdk;
+using System.Net;
+using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 public partial class MainWindow : Gtk.Window
 {
@@ -25,15 +30,15 @@ public partial class MainWindow : Gtk.Window
         System.Environment.Exit(1);
     }
 
-    protected void OnDownloadBTNPressed(object sender, EventArgs e)
+    protected async void OnDownloadBTNPressed(object sender, EventArgs e)
     {
-
+        await DownloadVideoAsync();
     }
 
 
-    protected void OnRetriveVidInfoPressed(object sender, EventArgs e)
+    protected async void OnRetriveVidInfoPressed(object sender, EventArgs e)
     {
-        Task getYoutubeInfoTask = Task.Run(() => { getYoutubeInfo(); });
+        await getYoutubeInfoAsync();
     }
 
     // Retrive info from frontend.
@@ -43,21 +48,22 @@ public partial class MainWindow : Gtk.Window
     }
 
     // Api calls
-    private async void getYoutubeInfo()
+    private async Task getYoutubeInfoAsync()
     {
         try
         {
-            SelectedVidInfo = await RetriveYouTubeVidInfo.getYoutubeVidAsync(GetEntertYoutubeLink());
-            printOutInfo();
+            //SelectedVidInfo = await RetriveYouTubeVidInfo.getYoutubeVidAsync(GetEntertYoutubeLink());
+            PrintOutInfo();
         }
-        catch
+        catch (Exception e)
         {
+            Console.WriteLine(e);
             Console.WriteLine("Error, Retriving information about youtube vid.");
             YouTubbeLinkInput_Textbox.Text = "Error, Retriving information about youtube vid. Write in a new one";
         }
     }
 
-    private async void DownloadVideo()
+    private async Task DownloadVideoAsync()
     {
         try
         {
@@ -67,17 +73,37 @@ public partial class MainWindow : Gtk.Window
         }
         catch
         {
-            Console.WriteLine("Error, Downloading youtube vid.");
+            Console.WriteLine("Error, Downloading youtube video.");
             YouTubbeLinkInput_Textbox.Text = "Error, Downloading youtube vid. Try Again";
         }
     }
 
     // Printout to gui
-    private void printOutInfo()
+    private void PrintOutInfo()
     {
+        SaveImage(SelectedVidInfo.thumb.Url, @"/h", ImageFormat.Png);
+
+        // Loading image from url
+        Video_Image.Pixbuf = new Pixbuf(@"h.jpeg");
 
         Description_TextBox.Buffer.Text = "Duration: " + SelectedVidInfo.Duration + "\n" + "Description: " + "\n" + SelectedVidInfo.Description;
 
         VideoTitle_LBL.Text = "Title of the clip: " + SelectedVidInfo.VidTitle;
+    }
+
+    public void SaveImage(string imageUrl, string filename, ImageFormat format)
+    {
+        WebClient client = new WebClient();
+        Stream stream = client.OpenRead(imageUrl);
+        Bitmap bitmap; bitmap = new Bitmap(stream);
+
+        if (bitmap != null)
+        {
+            bitmap.Save(filename, format);
+        }
+
+        stream.Flush();
+        stream.Close();
+        client.Dispose();
     }
 }

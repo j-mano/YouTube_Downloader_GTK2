@@ -24,6 +24,7 @@ namespace YouTubeDownloadProject.Services
                 returninfo.Duration     = video.Duration.Value;
                 returninfo.VidTitle     = video.Title;
                 returninfo.id           = video.Id;
+                returninfo.thumb        = video.Thumbnails[0];
             }
             catch
             {
