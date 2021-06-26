@@ -55,6 +55,7 @@ public partial class MainWindow
 		this.GtkAlignment.LeftPadding = ((uint)(12));
 		// Container child GtkAlignment.Gtk.Container+ContainerChild
 		this.fixed1 = new global::Gtk.Fixed();
+		this.fixed1.Name = "fixed1";
 		this.fixed1.HasWindow = false;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.YouTubbeLinkInput_Textbox = new global::Gtk.Entry();

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Gtk;
-using YouTubeDownloadProject.Model;
-using YouTubeDownloadProject.Services;
 using Gdk;
 using System.Net;
 using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
+using YouTubeDownloadProject.Model;
+using YouTubeDownloadProject.Services;
 
 public partial class MainWindow : Gtk.Window
 {
@@ -47,7 +47,7 @@ public partial class MainWindow : Gtk.Window
         return YouTubbeLinkInput_Textbox.Text;
     }
 
-    // Api calls
+    // Api calls.
     private async Task getYoutubeInfoAsync()
     {
         try
