@@ -2,19 +2,15 @@
 <stetic-interface>
   <configuration>
     <images-root-path>..</images-root-path>
-    <target-gtk-version>2.12</target-gtk-version>
+    <target-gtk-version>3.0</target-gtk-version>
   </configuration>
   <import>
     <widget-library name="../bin/Debug/Youtuube_Downloader.exe" internal="true" />
-    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="800 900">
+  <widget class="Gtk.Window" id="MainWindow" design-size="800 650">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
-    <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>
-    <property name="AllowGrow">False</property>
-    <property name="AllowShrink">True</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.Frame" id="frame1">
@@ -35,7 +31,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="YouTubbeLinkInput_Textbox">
                     <property name="MemberName" />
-                    <property name="WidthRequest">580</property>
+                    <property name="WidthRequest">600</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">•</property>
@@ -88,6 +84,8 @@
                 <child>
                   <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
                     <property name="MemberName" />
+                    <property name="WidthRequest">600</property>
+                    <property name="HeightRequest">200</property>
                     <property name="ShadowType">In</property>
                     <child>
                       <widget class="Gtk.TextView" id="Description_TextBox">
@@ -97,25 +95,15 @@
                         <property name="CanFocus">True</property>
                         <property name="ShowScrollbars">True</property>
                         <property name="Editable">False</property>
-                        <property name="Text" translatable="yes">Description</property>
+                        <property name="Text" translatable="yes">Youtube video description.
+
+Any kind of error is shown here aswell</property>
                       </widget>
                     </child>
                   </widget>
                   <packing>
                     <property name="X">10</property>
                     <property name="Y">358</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="Gtk.Image" id="Video_Image">
-                    <property name="MemberName" />
-                    <property name="WidthRequest">700</property>
-                    <property name="HeightRequest">250</property>
-                    <property name="Pixbuf">resource:Youtuube_Downloader.Screenshot from 2021-06-21 19-25-26.png</property>
-                  </widget>
-                  <packing>
-                    <property name="X">16</property>
-                    <property name="Y">75</property>
                   </packing>
                 </child>
                 <child>
@@ -136,20 +124,6 @@
                   <packing>
                     <property name="X">8</property>
                     <property name="Y">577</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="Gtk.Button" id="Download_Audio_btn">
-                    <property name="MemberName" />
-                    <property name="WidthRequest">150</property>
-                    <property name="CanFocus">True</property>
-                    <property name="Type">TextOnly</property>
-                    <property name="Label" translatable="yes">DownLoad Audio</property>
-                    <property name="UseUnderline">True</property>
-                  </widget>
-                  <packing>
-                    <property name="X">626</property>
-                    <property name="Y">397</property>
                   </packing>
                 </child>
                 <child>
@@ -195,6 +169,75 @@
                   <packing>
                     <property name="X">669</property>
                     <property name="Y">578</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Image" id="Video_Image">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">750</property>
+                    <property name="HeightRequest">250</property>
+                  </widget>
+                  <packing>
+                    <property name="X">12</property>
+                    <property name="Y">65</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Label" id="label2">
+                    <property name="MemberName" />
+                    <property name="LabelProp" translatable="yes">Max 720P</property>
+                  </widget>
+                  <packing>
+                    <property name="X">634</property>
+                    <property name="Y">328</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Label" id="label3">
+                    <property name="MemberName" />
+                    <property name="LabelProp" translatable="yes">Maximum resolution</property>
+                  </widget>
+                  <packing>
+                    <property name="X">635</property>
+                    <property name="Y">401</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="Download_Audio_btn">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">150</property>
+                    <property name="CanFocus">True</property>
+                    <property name="Type">TextOnly</property>
+                    <property name="Label" translatable="yes">DownLoad Audio</property>
+                    <property name="UseUnderline">True</property>
+                  </widget>
+                  <packing>
+                    <property name="X">628</property>
+                    <property name="Y">489</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Label" id="label4">
+                    <property name="MemberName" />
+                    <property name="LabelProp" translatable="yes">The Downloaded file is stored in local aplication folder</property>
+                  </widget>
+                  <packing>
+                    <property name="X">12</property>
+                    <property name="Y">607</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="Download_BTN_High_res">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">150</property>
+                    <property name="CanFocus">True</property>
+                    <property name="Type">TextOnly</property>
+                    <property name="Label" translatable="yes">Download Video</property>
+                    <property name="UseUnderline">True</property>
+                  </widget>
+                  <packing>
+                    <property name="X">629</property>
+                    <property name="Y">428</property>
                   </packing>
                 </child>
               </widget>

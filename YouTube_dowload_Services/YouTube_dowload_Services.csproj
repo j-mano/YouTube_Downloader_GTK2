@@ -48,7 +48,7 @@
       <HintPath>..\packages\Google.Apis.Auth.1.52.0\lib\net461\Google.Apis.Auth.PlatformServices.dll</HintPath>
     </Reference>
     <Reference Include="Google.Apis.YouTube.v3">
-      <HintPath>..\packages\Google.Apis.YouTube.v3.1.52.0.2364\lib\net45\Google.Apis.YouTube.v3.dll</HintPath>
+      <HintPath>..\packages\Google.Apis.YouTube.v3.1.52.0.2378\lib\net45\Google.Apis.YouTube.v3.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -87,7 +87,7 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="YoutubeExplode">
-      <HintPath>..\packages\YoutubeExplode.6.0.3\lib\net461\YoutubeExplode.dll</HintPath>
+      <HintPath>..\packages\YoutubeExplode.6.0.4\lib\net461\YoutubeExplode.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
@@ -111,11 +111,16 @@
     <Compile Include="Model\VidInfoModell.cs" />
     <Compile Include="Services\RetriveYouTubeVidInfo.cs" />
     <Compile Include="Services\DownloadYouTubeVid.cs" />
+    <Compile Include="Services\Autofaqinterfaces\DownloadYouTubeVidinterface.cs" />
+    <Compile Include="Services\Autofaqinterfaces\RetriveYouTubeVidInfoInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
       <IncludeInPackage>true</IncludeInPackage>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\Autofaqinterfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -32,12 +32,6 @@
         <member name="P:Google.Apis.YouTube.v3.YouTubeService.BasePath">
             <summary>Gets the service base path.</summary>
         </member>
-        <member name="P:Google.Apis.YouTube.v3.YouTubeService.BatchUri">
-            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
-        </member>
-        <member name="P:Google.Apis.YouTube.v3.YouTubeService.BatchPath">
-            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
-        </member>
         <member name="T:Google.Apis.YouTube.v3.YouTubeService.Scope">
             <summary>Available OAuth 2.0 scopes for use with the YouTube Data API v3.</summary>
         </member>
@@ -485,20 +479,6 @@
         </member>
         <member name="M:Google.Apis.YouTube.v3.CaptionsResource.DownloadRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)">
             <summary>Asynchronously download the media into the given stream.</summary>
-            <remarks>
-            This method uses the <see cref="P:Google.Apis.YouTube.v3.CaptionsResource.DownloadRequest.MediaDownloader"/> property to perform the download. Progress event
-            handlers and other configuration may be performed using that property prior to calling this method.
-            </remarks>
-        </member>
-        <member name="M:Google.Apis.YouTube.v3.CaptionsResource.DownloadRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)">
-            <summary>Synchronously download a range of the media into the given stream.</summary>
-            <remarks>
-            This method uses the <see cref="P:Google.Apis.YouTube.v3.CaptionsResource.DownloadRequest.MediaDownloader"/> property to perform the download. Progress event
-            handlers and other configuration may be performed using that property prior to calling this method.
-            </remarks>
-        </member>
-        <member name="M:Google.Apis.YouTube.v3.CaptionsResource.DownloadRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)">
-            <summary>Asynchronously download a range of the media into the given stream.</summary>
             <remarks>
             This method uses the <see cref="P:Google.Apis.YouTube.v3.CaptionsResource.DownloadRequest.MediaDownloader"/> property to perform the download. Progress event
             handlers and other configuration may be performed using that property prior to calling this method.
