@@ -1,10 +1,7 @@
 ﻿<Properties StartupConfiguration="{079938EF-B2D4-4D7B-A6F0-3A09615D1C6B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="YouTube_dowload_Services/Services/Autofaqinterfaces/RetriveYouTubeVidInfoInterface.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Youtuube_Downloader/MainWindow.cs">
     <Files>
-      <File FileName="Youtuube_Downloader/MainWindow.cs" Line="40" Column="36" />
-      <File FileName="YouTube_dowload_Services/Services/DownloadYouTubeVid.cs" Line="11" Column="18" />
-      <File FileName="YouTube_dowload_Services/Services/Autofaqinterfaces/DownloadYouTubeVidinterface.cs" Line="8" Column="1" />
-      <File FileName="YouTube_dowload_Services/Services/Autofaqinterfaces/RetriveYouTubeVidInfoInterface.cs" Line="8" Column="1" />
+      <File FileName="Youtuube_Downloader/MainWindow.cs" Line="94" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

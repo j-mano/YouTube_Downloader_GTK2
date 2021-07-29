@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Gtk;
-using Gdk;
-using System.Net;
-using System.IO;
-using System.Drawing;
-using System.Drawing.Imaging;
 using YouTubeDownloadProject.Model;
 using YouTubeDownloadProject.Services;
-using System.Text;
+using YouTube_dowload_Services.Services.FireYoutubeDownloaderServices;
+using Gdk;
+using YouTube_dowload_Services.Services.Autofaqinterfaces;
 
 public partial class MainWindow : Gtk.Window
 {
@@ -32,12 +29,12 @@ public partial class MainWindow : Gtk.Window
 
     protected async void OnDownloadBTNPressed(object sender, EventArgs e)
     {
-        await DownloadVideoAsync();
+        await DownloadVideoAsync(0);
     }
 
     protected async Task OnDownloadBTNHighResPressedAsync(object sender, EventArgs e)
     {
-        await DownloadVideoAsync();
+        await DownloadVideoAsync(1);
     }
 
     protected async void OnRetriveVidInfoPressed(object sender, EventArgs e)
@@ -67,12 +64,25 @@ public partial class MainWindow : Gtk.Window
         }
     }
 
-    private async Task DownloadVideoAsync()
+    /// <summary>
+    /// Downloading selected youtube vidoe. Expected res input selection select the resoltion of the video.
+    /// Res = 0 means maximum resoluiton to 720p. Res = 1 means maximum resoluiton of video. Higher than thath is selecting specific resolution.
+    /// </summary>
+    /// <returns>calls the downloadfunction in backend.</returns>
+    /// <param name="res">Res.</param>
+    private async Task DownloadVideoAsync(int res)
     {
         try
         {
             DownloadProgressLBL.Text = "Downloading";
-            await DownloadYouTubeVid.DownloadYouTubeVidFunction(SelectedVidInfo);
+
+            if (res >= 2)
+                await DownloadYouTubeVid.HighEndDownload(SelectedVidInfo, res, 30);
+            else if(res == 1)
+                await DownloadYouTubeVid.HighEndDownload(SelectedVidInfo, 0, 0);
+            else
+                await DownloadYouTubeVid.DownloadYouTubeVidFunction(SelectedVidInfo);
+
             DownloadProgressLBL.Text = "Downloaded to Aplication Folder";
         }
         catch (Exception e)
@@ -88,13 +98,14 @@ public partial class MainWindow : Gtk.Window
     {
         try
         {
-            //SaveImage(SelectedVidInfo.thumb.Url, @"Dtube.", ImageFormat.Png);
+            DownloadThumbnailScreenShoot ThumbnailDownloader = new DownloadThumbnailScreenShoot();
 
-            // Loading image from url
-            //Video_Image.Pixbuf = new Pixbuf(@"/Dtube.png");
+            ThumbnailDownloader.DownloadThumbnailScreenShoote(SelectedVidInfo);
+
+            // Displaying thumbnail
+            Video_Image.Pixbuf = new Pixbuf(@"ThumbNail.png");
 
             Description_TextBox.Buffer.Text = "Duration: " + SelectedVidInfo.Duration + "\n" + "Description: " + "\n" + SelectedVidInfo.Description;
-
 
             VideoTitle_LBL.Text = "Title of the clip: " + SelectedVidInfo.VidTitle;
         }
@@ -102,21 +113,5 @@ public partial class MainWindow : Gtk.Window
         {
             Description_TextBox.Buffer.Text = e.ToString();
         }
-
-       
-    }
-
-    public void SaveImage(string imageUrl, string filename, ImageFormat format)
-    {
-        WebClient client        = new WebClient();
-        Stream stream           = client.OpenRead(imageUrl);
-        Bitmap bitmap; bitmap   = new Bitmap(stream);
-
-        if (bitmap != null)
-            bitmap.Save(stream, format);
-
-        stream.Flush();
-        stream.Close();
-        client.Dispose();
     }
 }

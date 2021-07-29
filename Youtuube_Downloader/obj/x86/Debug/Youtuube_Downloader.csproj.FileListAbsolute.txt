@@ -70,7 +70,6 @@
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/System.Text.Json.dll
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/System.Threading.Tasks.Extensions.dll
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/System.ValueTuple.dll
-/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/YoutubeExplode.Converter.dll
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/YouTube_dowload_Services.dll
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/YouTube_dowload_Services.pdb
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/Newtonsoft.Json.xml
@@ -84,9 +83,7 @@
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/Microsoft.Bcl.AsyncInterfaces.xml
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/System.ValueTuple.xml
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/System.Text.Json.xml
-/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/YoutubeExplode.xml
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/CliWrap.xml
-/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/YoutubeExplode.Converter.xml
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/obj/x86/Debug/Youtuube_Downloader.csprojAssemblyReference.cache
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/obj/x86/Debug/Youtuube_Downloader.exe.config
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/obj/x86/Debug/Youtuube_Downloader.csproj.CoreCompileInputs.cache
@@ -94,3 +91,11 @@
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/obj/x86/Debug/Youtuube_Downloader.exe
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/obj/x86/Debug/Youtuube_Downloader.pdb
 /home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/System.Text.Encoding.CodePages.xml
+/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/System.Drawing.Common.dll
+/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/Autofac.dll
+/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/System.Diagnostics.DiagnosticSource.dll
+/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/System.Diagnostics.DiagnosticSource.xml
+/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/Autofac.pdb
+/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/Autofac.xml
+/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/Aspose.Imaging.dll
+/home/joachim/Documents/KodningReposGitHub/YouTube_Downloader_GTK2/Youtuube_Downloader/bin/Debug/Aspose.Imaging.xml

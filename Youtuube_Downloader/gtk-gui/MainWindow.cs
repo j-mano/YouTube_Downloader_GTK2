@@ -33,11 +33,11 @@ public partial class MainWindow
 
 	private global::Gtk.Label label3;
 
-	private global::Gtk.Button Download_BTN_High_res;
-
 	private global::Gtk.Button Download_Audio_btn;
 
 	private global::Gtk.Label label4;
+
+	private global::Gtk.Button Download_BTN_High_res;
 
 	private global::Gtk.Label GtkLabel4;
 
@@ -175,17 +175,6 @@ public partial class MainWindow
 		w12.X = 635;
 		w12.Y = 401;
 		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.Download_BTN_High_res = new global::Gtk.Button();
-		this.Download_BTN_High_res.WidthRequest = 150;
-		this.Download_BTN_High_res.CanFocus = true;
-		this.Download_BTN_High_res.Name = "Download_BTN_High_res";
-		this.Download_BTN_High_res.UseUnderline = true;
-		this.Download_BTN_High_res.Label = global::Mono.Unix.Catalog.GetString("Download Video");
-		this.fixed1.Add(this.Download_BTN_High_res);
-		global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.Download_BTN_High_res]));
-		w13.X = 628;
-		w13.Y = 422;
-		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.Download_Audio_btn = new global::Gtk.Button();
 		this.Download_Audio_btn.WidthRequest = 150;
 		this.Download_Audio_btn.CanFocus = true;
@@ -193,17 +182,28 @@ public partial class MainWindow
 		this.Download_Audio_btn.UseUnderline = true;
 		this.Download_Audio_btn.Label = global::Mono.Unix.Catalog.GetString("DownLoad Audio");
 		this.fixed1.Add(this.Download_Audio_btn);
-		global::Gtk.Fixed.FixedChild w14 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.Download_Audio_btn]));
-		w14.X = 628;
-		w14.Y = 489;
+		global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.Download_Audio_btn]));
+		w13.X = 628;
+		w13.Y = 489;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.label4 = new global::Gtk.Label();
 		this.label4.Name = "label4";
 		this.label4.LabelProp = global::Mono.Unix.Catalog.GetString("The Downloaded file is stored in local aplication folder");
 		this.fixed1.Add(this.label4);
-		global::Gtk.Fixed.FixedChild w15 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label4]));
-		w15.X = 12;
-		w15.Y = 607;
+		global::Gtk.Fixed.FixedChild w14 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label4]));
+		w14.X = 12;
+		w14.Y = 607;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.Download_BTN_High_res = new global::Gtk.Button();
+		this.Download_BTN_High_res.WidthRequest = 150;
+		this.Download_BTN_High_res.CanFocus = true;
+		this.Download_BTN_High_res.Name = "Download_BTN_High_res";
+		this.Download_BTN_High_res.UseUnderline = true;
+		this.Download_BTN_High_res.Label = global::Mono.Unix.Catalog.GetString("Download Video");
+		this.fixed1.Add(this.Download_BTN_High_res);
+		global::Gtk.Fixed.FixedChild w15 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.Download_BTN_High_res]));
+		w15.X = 629;
+		w15.Y = 428;
 		this.GtkAlignment.Add(this.fixed1);
 		this.frame1.Add(this.GtkAlignment);
 		this.GtkLabel4 = new global::Gtk.Label();
@@ -223,6 +223,5 @@ public partial class MainWindow
 		this.Download_BTN.Pressed += new global::System.EventHandler(this.OnDownloadBTNPressed);
 		this.Retrive_Vid_Info.Pressed += new global::System.EventHandler(this.OnRetriveVidInfoPressed);
 		this.Exit_BTN.Pressed += new global::System.EventHandler(this.OnButton1Pressed);
-		this.Download_BTN_High_res.Pressed += new global::System.EventHandler(this.OnButton1Pressed);
 	}
 }
